@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'devise'
 gem 'devise-i18n'
+
+gem 'paperclip'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
