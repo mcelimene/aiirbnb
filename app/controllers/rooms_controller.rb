@@ -17,7 +17,7 @@ before_action :require_same_user, only: [:edit, :update]
     if @room.save
       if params[:images]
         params[:images].each do |i|
-          @room.photos.create(image, i)
+          @room.photos.create(image: i)
         end
       end
       @photos = @room.photos
@@ -39,7 +39,7 @@ before_action :require_same_user, only: [:edit, :update]
     if @room.update(room_params)
       if params[:images]
         params[:images].each do |i|
-          @room.photos.create(image, i)
+          @room.photos.create(image: i)
         end
       end
       @photos = @room.photos
@@ -64,5 +64,6 @@ private
     if current_user.id != @room.user_id
       flash[:danger] = "Vous n'avez pas le droit de modifier cette page"
       redirect_to root_path
+    end
   end
 end
