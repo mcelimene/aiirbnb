@@ -21,6 +21,7 @@ gem 'paperclip'
 gem 'toastr-rails'
 gem 'font-awesome-sass'
 gem 'geocoder'
+gem 'jquery-ui-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
