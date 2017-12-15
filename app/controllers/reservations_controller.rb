@@ -1,10 +1,10 @@
 class ReservationsController < ApplicationController
 
-	before_action :auhenticate_user!
+	before_action :authenticate_user!
 
 	def create
 		@reservation = current_user.reservations.create(reservation_params)
-		redirect_to @reservation.room, notice "Votre réservation a été acceptée"
+		redirect_to @reservation.room, notice: "Votre réservation a été acceptée"
 	end
 
 	private
