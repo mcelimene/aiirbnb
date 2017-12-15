@@ -22,6 +22,7 @@ gem 'toastr-rails'
 gem 'font-awesome-sass'
 gem 'geocoder'
 gem 'jquery-ui-rails'
+gem 'ransack'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
