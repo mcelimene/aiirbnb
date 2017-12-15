@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+  	@rooms = Room.order("RANDOM()").limit(3)
   end
 
   def search
@@ -10,7 +11,7 @@ class PagesController < ApplicationController
   	arrResult = Array.new
 
   	if session[:aiirbnb_search] && session[:aiirbnb_search] != ""
-  		@rooms_address = Room.where(active: true).near(session[:aiirbnb_search]), 5, order:"distance")
+  		@rooms_address = Room.where(active: true).near(session[:aiirbnb_search], 5, order:"distance")
   	else
   		@rooms_address = Room.where(active: true).all
   	end
